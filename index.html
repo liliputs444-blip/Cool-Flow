@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CoolFlow | Official Band Site</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #000;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* 🎥 VIDEO BACKGROUND */
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.video-bg iframe {
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+/* DARK OVERLAY */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Darker for better text readability */
+    z-index: -1;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #00ffff;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.logo {
+    color: #00ffff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    text-shadow: 0 0 20px #00ffff;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* SECTIONS */
+section {
+    padding: 100px 20px;
+    text-align: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #00ffff;
+    text-transform: uppercase;
+}
+
+.content-box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    transition: 0.3s;
+}
+
+.content-box:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+    transform: translateY(-5px);
+}
+
+/* FEATURES (SERVICES) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* CONTACT INFO */
+.contact-link {
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    margin: 15px 0;
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #00ffff;
+    color: black;
+    border-color: #00ffff;
+}
+
+/* ANIMATIONS */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #000;
+    border-top: 1px solid #333;
+}
+</style>
+</head>
+
+<body>
+
+<div class="video-bg">
+    <iframe 
+        src="https://www.youtube.com/embed/JnBymI52CGI?autoplay=1&mute=1&loop=1&playlist=JnBymI52CGI&controls=0&modestbranding=1"
+        frameborder="0"
+        allow="autoplay; fullscreen">
+    </iframe>
+</div>
+
+<nav class="navbar">
+    <h1 class="logo">CoolFlow</h1>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero" id="home">
+    <div>
+        <h2>Cool Flow</h2>
+        <p>Acoustic Vibes from the Heart of Danao City</p>
+    </div>
+</section>
+
+<section id="about" class="reveal">
+    <h2>The Band</h2>
+    <div class="content-box">
+        <p style="font-size: 1.2rem; line-height: 1.8;">
+            We are <strong>Cool Flow</strong>, a student band from <strong>Rosemont Hills Montessori College</strong> in Danao City, Cebu. 
+            Hailing from the beautiful island of Cebu, we bring passion and harmony to every performance. 
+            We regularly perform at resto-bars and bring a special touch to weddings and private parties.
+        </p>
+    </div>
+</section>
+
+<section id="features" class="reveal">
+    <h2>What We Do</h2>
+    <div class="grid">
+        <div class="content-box">
+            <h3>Resto Bars</h3>
+            <p>Live acoustic sessions to set the perfect mood for your evening.</p>
+        </div>
+        <div class="content-box">
+            <h3>Weddings</h3>
+            <p>Making your special day unforgettable with personalized music.</p>
+        </div>
+        <div class="content-box">
+            <h3>Parties</h3>
+            <p>High-energy performances for birthdays and special occasions.</p>
+        </div>
+    </div>
+</section>
+
+<section id="vision" class="reveal">
+    <h2>Our Vision</h2>
+    <div class="content-box">
+        <p style="font-size: 1.1rem;">To showcase the musical talent of Danao City and share our love for music across the Philippines, one performance at a time.</p>
+    </div>
+</section>
+
+<section id="contact" class="reveal">
+    <h2>Bookings & Reservations</h2>
+    <div class="content-box">
+        <p>Ready to have us at your next event?</p>
+        <a href="tel:09155107130" class="contact-link">📞 0915 510 7130</a>
+        
+        <div class="social-links">
+            <a href="https://facebook.com/CoolFlow27" target="_blank">Facebook</a>
+            <a href="https://tiktok.com/@cool.flow" target="_blank">TikTok</a>
+            <a href="https://www.youtube.com/@coolflow27" target="_blank">YouTube</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Cool Flow | Rosemont Hills Montessori College | Danao City, Cebu</p>
+</footer>
+
+<script>
+function reveal() {
+    let reveals = document.querySelectorAll(".reveal");
+    reveals.forEach(el => {
+        let windowHeight = window.innerHeight;
+        let elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 50) {
+            el.classList.add("active");
+        }
+    });
+}
+window.addEventListener("scroll", reveal);
+reveal(); // Run on load
+</script>
+
+</body>
+</html>
